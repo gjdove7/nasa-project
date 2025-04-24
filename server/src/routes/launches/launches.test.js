@@ -43,7 +43,7 @@ describe('Launches API', () => {
             launchDate: 'zoot',
         };
     
-        test.skip('It should respond with 201 created', async () => {
+        test('It should respond with 201 created', async () => {
             const response = await request(app)
             .post('/v1/launches')
             .send(completeLaunchData)
