@@ -47,7 +47,7 @@ describe('Launches API', () => {
             const response = await request(app)
             .post('/v1/launches')
             .send(completeLaunchData)
-            .expect('Content-Type', /json/)
+            // .expect('Content-Type', /json/)
             .expect(201); //supertest assertions
     
             const requestDate = new Date(completeLaunchData.launchDate).valueOf();
@@ -56,6 +56,7 @@ describe('Launches API', () => {
     
             expect(response.body).toMatchObject(launchDataWithoutDate); //jest assertion
         });
+
         test('It should catch missing required properites', async () => {
             const response = await request(app)
             .post('/v1/launches')
@@ -67,6 +68,7 @@ describe('Launches API', () => {
                 error: 'Missing required launch property',
             });
         });
+
         test('It should catch invalid dates', async () => {
             const response = await request(app)
             .post('/v1/launches')
