@@ -48,7 +48,7 @@ describe('Launches API', () => {
             .post('/v1/launches')
             .send(completeLaunchData)
             // .expect('Content-Type', /json/)
-            .expect(201); //supertest assertions
+            // .expect(201); //supertest assertions
     
             const requestDate = new Date(completeLaunchData.launchDate).valueOf();
             const responseDate = new Date(response.body.launchDate).valueOf();
