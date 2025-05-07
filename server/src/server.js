@@ -10,7 +10,7 @@ const { loadLaunchData } = require('./models/launches.model');
 
 const PORT = process.env.PORT || 8000;
 
-const server = http.createServer(app);
+const server = http.createServer(app); // building the server this way (using express and the built in node http server) allows us to respond to HTTP requests and use web sockets
 
 async function startServer() {
     await mongoConnect();
@@ -23,4 +23,3 @@ async function startServer() {
 }
 
 startServer();
-// building the server this way (using express and the built in node http server) allows us to respond to HTTP requests and use web sockets
