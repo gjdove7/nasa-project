@@ -2,7 +2,7 @@
 
 NASA Mission Control Project
 
-Video: https://github.com/user-attachments/assets/c1e15805-6ccc-41e8-bfeb-f2bc57705539
+https://github.com/user-attachments/assets/c1e15805-6ccc-41e8-bfeb-f2bc57705539
 
 Live demo site: [NASA Mission Control](http://18.222.22.231:8000)
 
